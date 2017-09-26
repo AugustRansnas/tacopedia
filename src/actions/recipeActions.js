@@ -6,11 +6,11 @@ export function loadRecipesSuccess(recipes) {
 }
 
 export function loadRecipes() {
-  return function(dispatch) {
-    return courseApi.getAllCourses().then(recipes => {
-      dispatch(loadRecipesSuccess(recipes));
-    }).catch(error => {
-      throw(error);
-    });
-  };
+   return function(dispatch) {
+      return courseApi.getAllCourses().then(recipes => {
+         dispatch(loadRecipesSuccess(recipes));
+      }).catch(error => {
+         throw(error);
+      });
+   };
 }

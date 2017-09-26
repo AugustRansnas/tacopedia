@@ -13,8 +13,6 @@ const store = configureStore();
 store.dispatch(loadRecipes());
 
 render(
-  <Provider store={store}>
+   <Provider store={store}>
    <Router history={browserHistory} routes={routes}/>
-   </Provider>,
-   document.getElementById('app')
- );
+</Provider>, document.getElementById('app'));
