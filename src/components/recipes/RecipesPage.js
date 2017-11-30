@@ -2,12 +2,17 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as recipeActions from '../../actions/recipeActions';
-import Input from '../common/Input';
 import RecipeList from './RecipeList';
+import {browserHistory} from 'react-router';
 
 class RecipesPage extends React.Component {
    constructor(props, context) {
       super(props, context);
+      this.redirectToAddRecipePage = this.redirectToAddRecipePage.bind(this);
+   }
+
+   redirectToAddRecipePage() {
+     browserHistory.push('./recipe');
    }
 
    render() {
@@ -15,6 +20,10 @@ class RecipesPage extends React.Component {
       return (
          <div>
             <h1>Recipes</h1>
+            <input type="submit"
+                   value="Add Recipe"
+                   className="btn btn-primary"
+                   onClick={this.redirectToAddRecipePage}/>
             <RecipeList recipes={recipes}/>
          </div>
       );

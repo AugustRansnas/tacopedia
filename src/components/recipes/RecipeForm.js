@@ -39,7 +39,7 @@ const RecipeForm = ({recipe, allAuthors, onSave, onChange, loading, errors}) => 
       <input
         type="submit"
         disabled={loading}
-        value={loanding ? 'Saving...' : 'Save'}
+        value={loading ? 'Saving...' : 'Save'}
         className="btn btn-primary"
         onClick={onSave}/>
     </form>
@@ -54,3 +54,5 @@ RecipeForm.propTypes = {
   loading: React.PropTypes.bool,
   errors: React.PropTypes.object
 };
+
+export default RecipeForm;

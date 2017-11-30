@@ -8,7 +8,7 @@ const RecipeListRow = ({recipe}) => {
             <a href={recipe.watchHref} target="_blank">Watch</a>
          </td>
          <td>
-            <Link to={'./recipe/' + recipe.id}>{recipe.title}</Link>
+            <Link to={'/recipe/' + recipe.id}>{recipe.title}</Link>
          </td>
          <td>{recipe.authorId}</td>
          <td>{recipe.category}</td>
